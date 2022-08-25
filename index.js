@@ -1,7 +1,7 @@
 import {} from 'dotenv/config'
 
 import express from 'express'
-import route from './src/route/route.js'
+import router from './src/route/route.js'
 import connectdb from './src/dbConnection/connectDb.js'
 
 
@@ -17,7 +17,7 @@ const DATABASE_URL = process.env.DATABASE_URL
 connectdb(DATABASE_URL)
 
 //Load Routes
-app.use('/quora', route)
+app.use('/quora', router)
 
 
 
